@@ -1,2 +1,12 @@
-<h1>Reviewss#new</h1>
-<p>Find me in app/views/reviewss/new.html.erb</p>
+<div class="container">
+  <h1>Create a new Review</h1>
+  <%= simple_form_for [@restaurant, @review] do |f| %>
+    <%= f.input :content %>
+    <div style="display: flex; width: 50%; justify-content: space-between;">
+      Rating:
+    <%= f.collection_radio_buttons :rating, [[0, '0'], [1, '1'] ,[2, '2'], [3, '3'] ,[4, '4'], [5, '5']], :first, :last%>
+    </div>
+    <br>
+    <%= f.submit "add a review", class: "btn btn-primary" %>
+  <% end %>
+</div>

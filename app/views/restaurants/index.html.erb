@@ -1,2 +1,10 @@
-<h1>Restaurants#index</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<div class="container">
+<h1>All available Restaurants</h1>
+<ul class="list-group list-group-flush">
+  <% @restaurants.each do | restaurant | %>
+  <%= link_to restaurant_path(restaurant) do %>
+  <li class="list-group-item"><%= restaurant.name %> | <%= restaurant.address %> <span class="badge badge-primary badge-pill"><%= restaurant.category %></span></li>
+    <% end %>
+  <% end %>
+</ul>
+</div>

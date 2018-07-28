@@ -11,6 +11,14 @@
   </head>
 
   <body>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="<%= restaurants_path %>">Restaurants</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="<%= new_restaurant_path %>">Create New Restaurant</a>
+  </li>
+</ul>
     <%= yield %>
   </body>
 </html>
